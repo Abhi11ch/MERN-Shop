@@ -1,70 +1,136 @@
-# Getting Started with Create React App
+eCommerce Platform Project - MERN Stack
+Welcome to the eCommerce Platform Project built using the MERN (MongoDB, Express.js, React, Node.js) Stack. This project provides a robust and full-featured online shopping platform with various functionalities to enhance the user experience.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Live App Demo : https://mern-shop-abxs.onrender.com/
+Note: Please be aware that Render's free tier will automatically shut down after 15 minutes of inactivity. Consequently, the first request after reactivation may experience a delay, but subsequent requests will be faster.
 
-## Available Scripts
+Features
+Full-Featured Shopping Cart: Seamless shopping cart functionality for users to add, remove, and manage products.
+Product Reviews and Ratings: Users can leave reviews and provide ratings for products.
+Top Products Carousel: Display a carousel of top-rated or featured products.
+Product Pagination: Navigate through products efficiently with pagination.
+Product Search Feature: Easily search for products based on keywords.
+User Profile with Orders: Users can create profiles and track their order history.
+Admin Dashboard: Comprehensive dashboard for administrators to manage admins, products, users, and orders.
+Admin Admin Management: Manage admin accounts.
+Admin Product Management: Add, edit, and delete products from the platform.
+Admin User Management: Manage user accounts.
+Admin Order Details Page: Access detailed information about each order.
+Mark Orders as Delivered Option: Ability to update order status to "delivered."
+Checkout Process: Seamless checkout with options for shipping and payment methods.
+Razorpay Integration: Secure payment processing through Razorpay.
+Database Seeder: Easily populate the database with sample products and users.
+Getting Started
+Prerequisites
+Fork the repository to your GitHub account.
+Clone the forked repository to your local machine
+git clone https://github.com/your-username/MERN-eCommerce.git
+cd MERN-eCommerce
+Create a MongoDB database and obtain your MongoDB URI from MongoDB Atlas.
+Create a Razorpay account and obtain your Key ID and Key Secret from Razorpay.
+Create a Brevo account and generate a new SMTP Key from Brevo
+Env Variables
+Rename the .env.example file to .env and add the following environment variables:
+NODE_ENV=development
+PORT=5000
+JWT_SECRET=ADD_YOUR_JWT_SECRET_HERE
+MONGO_URI=ADD_YOUR_MONGO_URI_HERE
+RAZORPAY_KEY_ID=ADD_YOUT_RAZORPAY_KEY_ID
+RAZORPAY_KEY_SECRET=ADD_YOUR_RAZORPAY_KEY_SECRET
+PAGINATION_MAX_LIMIT=12 # This will show 12 products per page; you can change it.
+EMAIL_HOST=smtp-relay.brevo.com
+EMAIL_PORT=587
+EMAIL_USER=ADD_YOUR_BREVO_LOGIN
+EMAIL_PASS=ADD_YOUR_BREVO_PASSWORD
+EMAIL_FROM=ADD_YOUR_BREVO_LOGIN
+Install Dependencies
+Run the following commands to install dependencies for both the frontend and backend:
 
-In the project directory, you can run:
+npm install
+cd frontend
+npm install
+Run
+To run both the frontend and backend concurrently, use:
 
-### `npm start`
+npm run dev
+To run only the backend:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+npm run server
+Build & Deploy
+To create a production build for the frontend:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+cd frontend
+npm run build
+Seed Database
+Use the following commands to seed the database with sample users and products, or destroy all data:
 
-### `npm test`
+# Import data
+npm run data:import
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Destroy data
+npm run data:destroy
+Sample User Logins
+Live Admin Dashboard Login:: https://mern-shop-abxs.onrender.com/admin/login
 
-### `npm run build`
+Email: admin@admin.com
+Password: admin123
+Live Customer Logins:: https://mern-shop-abxs.onrender.com/login
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+John Doe
+Email: john@email.com
+Password: john123
+Alice Smith
+Email: alice@email.com
+Password: alice123
+Feel free to explore and customize this eCommerce platform for your specific needs. Happy coding🤩!
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Contributing to the eCommerce Platform Project
+We welcome and appreciate contributions from the community to enhance and improve the eCommerce Platform Project. Whether you're a developer, designer, tester, or someone with valuable feedback, your input is valuable. Here's how you can contribute:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Getting Started
+Fork the repository to your GitHub account.
 
-### `npm run eject`
+Clone the forked repository to your local machine:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+git clone https://github.com/your-username/MERN-eCommerce.git
+Navigate to the project directory:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+cd MERN-eCommerce
+Create a new branch for your contributions:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+git checkout -b feature/your-feature-name
+git checkout -b issues/your-issue-name
+Making Changes
+Implement your changes and improvements.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Ensure that your changes adhere to the project's coding style and conventions.
 
-## Learn More
+Test your changes thoroughly to avoid introducing bugs.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Update the project documentation if necessary.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Committing Changes
+Commit your changes with a descriptive commit message:
 
-### Code Splitting
+git add .
+git commit -m "Add your descriptive commit message here"
+Push your changes to your forked repository:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+git push origin feature/your-feature-name
+git push origin issues/your-issue-name
+Creating a Pull Request (PR)
+Visit your forked repository on GitHub.
 
-### Analyzing the Bundle Size
+Switch to the branch containing your changes.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Click on the "New Pull Request" button.
 
-### Making a Progressive Web App
+Provide a clear title and description for your pull request, explaining the purpose and scope of your changes.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Submit the pull request.
 
-### Advanced Configuration
+Code Review
+Your contribution will be reviewed by the project maintainers. Be prepared to address any feedback or suggestions to ensure the quality and compatibility of your changes.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Thank You!
+Thank you for considering contributing to the eCommerce Platform Project. Your efforts help make this project better for everyone. If you have any questions or need assistance, feel free to reach out through the issue tracker or discussions. Happy coding🤩!
